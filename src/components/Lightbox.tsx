@@ -33,13 +33,13 @@ export default function Lightbox({ imageUrl, alt, itemName, onClose }: LightboxP
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink-900/90"
+      className="lightbox-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink-900/90"
       onClick={handleBackdropClick}
       role="dialog"
       aria-modal="true"
       aria-label={`Foto de ${itemName}`}
     >
-      <div className="relative max-w-4xl w-full max-h-[90vh] flex flex-col">
+      <div className="lightbox-content relative max-w-4xl w-full max-h-[90vh] flex flex-col">
         <div className="flex items-center justify-between mb-3">
           <h2 className="text-white text-lg font-medium truncate pr-4">
             {itemName}
