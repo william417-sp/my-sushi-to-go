@@ -93,11 +93,12 @@ export default function Menu() {
           </p>
           
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-            {menuItems.map((item) => (
+            {menuItems.map((item, index) => (
               <button
                 key={item.id}
                 onClick={() => setSelectedItem(item)}
-                className="group relative aspect-square overflow-hidden rounded-xl card-soft focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 text-left"
+                className="menu-card menu-card-animate group relative aspect-square overflow-hidden rounded-xl card-soft focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 text-left"
+                style={{ '--delay': `${index * 0.05}s` } as React.CSSProperties}
                 aria-label={`Ver foto de ${item.name || 'platillo por confirmar'}`}
               >
                 <img

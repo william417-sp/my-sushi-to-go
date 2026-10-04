@@ -8,18 +8,18 @@ export default function Hero({ onOrderClick }: HeroProps) {
       <div className="max-w-4xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
           <div className="flex-1 text-center lg:text-left">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-ink-900 mb-6 leading-tight tracking-tight">
+            <h2 className="hero-animate text-4xl sm:text-5xl lg:text-6xl font-bold text-ink-900 mb-6 leading-tight tracking-tight">
               Sushi Fresco
               <br />
               <span className="text-accent-500">Para Llevar</span>
             </h2>
             
-            <p className="text-lg sm:text-xl text-ink-600 mb-10 leading-relaxed max-w-xl">
+            <p className="hero-animate-delay text-lg sm:text-xl text-ink-600 mb-10 leading-relaxed max-w-xl">
               Disfruta de la auténtica experiencia del sushi preparado con ingredientes frescos, 
               listo para recoger en Río Grande, Puerto Rico.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="hero-animate-delay-2 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button
                 onClick={onOrderClick}
                 className="inline-flex items-center justify-center px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2"
@@ -35,7 +35,7 @@ export default function Hero({ onOrderClick }: HeroProps) {
             </div>
           </div>
           
-          <div className="flex-shrink-0">
+          <div className="hero-animate-delay flex-shrink-0">
             <img 
               src="./images/logo-bamboo.jpeg" 
               alt="My Sushi to Go - Panda mascot with sushi tray"

@@ -61,14 +61,6 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--color-accent-500);
 }
 
-.menu-card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.menu-card:hover {
-  transform: translateY(-2px);
-}
-
 .section-divider {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--color-ink-200), transparent);
@@ -82,4 +74,153 @@ h1, h2, h3, h4, h5, h6 {
     var(--color-paper-300) 10px,
     var(--color-paper-300) 20px
   );
+}
+
+/* ========================================
+   MOTION ANIMATIONS
+   ======================================== */
+
+/* Hero entrance animation */
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-animate {
+  animation: hero-fade-up 0.6s ease-out both;
+}
+
+.hero-animate-delay {
+  animation: hero-fade-up 0.6s ease-out 0.15s both;
+}
+
+.hero-animate-delay-2 {
+  animation: hero-fade-up 0.6s ease-out 0.3s both;
+}
+
+/* Menu card entrance with stagger */
+@keyframes card-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.menu-card-animate {
+  animation: card-fade-in 0.4s ease-out both;
+}
+
+/* Stagger delays for menu cards (using CSS custom property) */
+.menu-card-animate[style*="--delay: 0"] { animation-delay: 0ms; }
+.menu-card-animate[style*="--delay: 1"] { animation-delay: 50ms; }
+.menu-card-animate[style*="--delay: 2"] { animation-delay: 100ms; }
+.menu-card-animate[style*="--delay: 3"] { animation-delay: 150ms; }
+.menu-card-animate[style*="--delay: 4"] { animation-delay: 200ms; }
+.menu-card-animate[style*="--delay: 5"] { animation-delay: 250ms; }
+.menu-card-animate[style*="--delay: 6"] { animation-delay: 300ms; }
+.menu-card-animate[style*="--delay: 7"] { animation-delay: 350ms; }
+.menu-card-animate[style*="--delay: 8"] { animation-delay: 400ms; }
+.menu-card-animate[style*="--delay: 9"] { animation-delay: 450ms; }
+.menu-card-animate[style*="--delay: 10"] { animation-delay: 500ms; }
+.menu-card-animate[style*="--delay: 11"] { animation-delay: 550ms; }
+.menu-card-animate[style*="--delay: 12"] { animation-delay: 600ms; }
+.menu-card-animate[style*="--delay: 13"] { animation-delay: 650ms; }
+.menu-card-animate[style*="--delay: 14"] { animation-delay: 700ms; }
+.menu-card-animate[style*="--delay: 15"] { animation-delay: 750ms; }
+.menu-card-animate[style*="--delay: 16"] { animation-delay: 800ms; }
+.menu-card-animate[style*="--delay: 17"] { animation-delay: 850ms; }
+.menu-card-animate[style*="--delay: 18"] { animation-delay: 900ms; }
+
+/* Menu card hover/tap lift */
+.menu-card {
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.menu-card:hover,
+.menu-card:active {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(26, 24, 21, 0.1), 0 4px 8px rgba(26, 24, 21, 0.06);
+}
+
+.menu-card:active {
+  transform: translateY(-2px);
+}
+
+/* Lightbox open animation */
+@keyframes lightbox-backdrop-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lightbox-content-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.lightbox-backdrop {
+  animation: lightbox-backdrop-in 0.2s ease-out both;
+}
+
+.lightbox-content {
+  animation: lightbox-content-in 0.25s ease-out 0.05s both;
+}
+
+/* ========================================
+   REDUCED MOTION PREFERENCES
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-animate,
+  .hero-animate-delay,
+  .hero-animate-delay-2 {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .menu-card-animate {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .menu-card {
+    transition: none;
+  }
+
+  .menu-card:hover,
+  .menu-card:active {
+    transform: none;
+  }
+
+  .lightbox-backdrop,
+  .lightbox-content {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
 }
