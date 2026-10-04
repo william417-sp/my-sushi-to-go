@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sushi-50: #fef7f0;
+  --color-sushi-100: #fdebd9;
+  --color-sushi-200: #fbd5b3;
+  --color-sushi-300: #f8b882;
+  --color-sushi-400: #f4914f;
+  --color-sushi-500: #f07028;
+  --color-sushi-600: #e1541e;
+  --color-sushi-700: #bb3f1a;
+  --color-sushi-800: #95331d;
+  --color-sushi-900: #792d1b;
+  
+  --color-nori-50: #f4f6f7;
+  --color-nori-100: #e3e7ea;
+  --color-nori-200: #c9d1d7;
+  --color-nori-300: #a4b1bb;
+  --color-nori-400: #778997;
+  --color-nori-500: #5c6e7c;
+  --color-nori-600: #4f5d69;
+  --color-nori-700: #444f58;
+  --color-nori-800: #3c444c;
+  --color-nori-900: #1a1a2e;
+  
+  --color-wasabi-50: #f0fdf4;
+  --color-wasabi-100: #dcfce7;
+  --color-wasabi-200: #bbf7d0;
+  --color-wasabi-300: #86efac;
+  --color-wasabi-400: #4ade80;
+  --color-wasabi-500: #22c55e;
+  --color-wasabi-600: #16a34a;
+  --color-wasabi-700: #15803d;
+  --color-wasabi-800: #166534;
+  --color-wasabi-900: #14532d;
+  
+  --color-rice-50: #fdfcfb;
+  --color-rice-100: #f8f5f2;
+  --color-rice-200: #f0ebe5;
+  --color-rice-300: #e5ddd3;
+  --color-rice-400: #d4c7b8;
+  
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Noto Sans JP', 'Inter', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-rice-50);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 50%, #3d3d5c 100%);
+}
+
+.card-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+}
+
+.card-shadow-hover:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+}
+
+.demo-banner {
+  background: linear-gradient(90deg, #e63946 0%, #d62839 100%);
+}
+
+.pattern-dots {
+  background-image: radial-gradient(circle, rgba(240, 112, 40, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.menu-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-4px);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+}
+
+.sushi-icon {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
