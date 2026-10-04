@@ -1,4 +1,4 @@
-import { AlertCircle, ImageOff } from 'lucide-react'
+import { AlertCircle } from 'lucide-react'
 
 interface MenuItem {
   name: string
@@ -17,7 +17,7 @@ export default function Menu() {
   return (
     <section id="menu" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-paper-200">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <img 
             src="./images/sushi-menu-header.jpeg" 
             alt="Sushi Menu"
@@ -28,37 +28,21 @@ export default function Menu() {
           </p>
         </div>
 
-        <div className="mb-6 p-4 bg-paper-300/50 rounded-lg border border-ink-200 text-center">
-          <p className="text-sm text-ink-500 flex items-center justify-center gap-2">
-            <ImageOff className="w-4 h-4" aria-hidden="true" />
-            <span>Fotos de platillos pendientes — se añadirán una vez proporcionadas por el negocio</span>
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {verifiedItems.map((item) => (
-            <article 
-              key={item.name}
-              className="menu-card bg-paper-50 rounded-xl overflow-hidden card-soft"
-            >
-              <div className="w-full h-40 placeholder-image flex items-center justify-center">
-                <span className="text-ink-400 text-sm bg-paper-50/80 px-3 py-1 rounded">
-                  Foto pendiente
-                </span>
+        <div className="mb-12">
+          <h3 className="text-lg font-semibold text-ink-700 mb-6 text-center">
+            Artículos Verificados
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {verifiedItems.map((item) => (
+              <div 
+                key={item.name}
+                className="bg-paper-50 rounded-xl p-5 card-soft flex items-center justify-between"
+              >
+                <span className="text-ink-800 font-medium">{item.name}</span>
+                <span className="text-xl font-bold text-accent-500">${item.price}</span>
               </div>
-              
-              <div className="p-5">
-                <div className="flex items-baseline justify-between gap-3">
-                  <h3 className="text-lg font-semibold text-ink-800 leading-tight">
-                    {item.name}
-                  </h3>
-                  <span className="text-xl font-bold text-accent-500 whitespace-nowrap">
-                    ${item.price}
-                  </span>
-                </div>
-              </div>
-            </article>
-          ))}
+            ))}
+          </div>
         </div>
 
         <div className="bg-paper-50 border border-ink-200 rounded-xl p-6 sm:p-8">
