@@ -17,7 +17,7 @@ function App() {
       <Header />
       <main className="flex-grow">
         <Hero onOrderClick={() => setShowOrderModal(true)} />
-        <Menu onOrderClick={() => setShowOrderModal(true)} />
+        <Menu />
         <Offers />
         <Contact />
       </main>

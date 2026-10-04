@@ -31,7 +31,7 @@ export default function OrderModal({ onClose }: OrderModalProps) {
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink-900/60 backdrop-blur-sm"
       onClick={handleBackdropClick}
       role="dialog"
       aria-modal="true"
@@ -39,7 +39,7 @@ export default function OrderModal({ onClose }: OrderModalProps) {
     >
       <div 
         ref={modalRef}
-        className="bg-white rounded-2xl max-w-md w-full shadow-2xl overflow-hidden"
+        className="bg-paper-50 rounded-2xl max-w-md w-full shadow-2xl overflow-hidden"
       >
         <div className="demo-banner p-4">
           <div className="flex items-center justify-between text-white">
@@ -60,30 +60,33 @@ export default function OrderModal({ onClose }: OrderModalProps) {
 
         <div className="p-6 sm:p-8">
           <div className="text-center mb-6">
-            <div className="w-16 h-16 bg-sushi-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-3xl">🍣</span>
-            </div>
-            <h2 id="modal-title" className="text-xl font-bold text-nori-900 mb-2">
+            <img 
+              src="./images/profile.jpeg" 
+              alt=""
+              className="w-16 h-16 rounded-full mx-auto mb-4 object-cover"
+              aria-hidden="true"
+            />
+            <h2 id="modal-title" className="text-xl font-bold text-ink-800 mb-2">
               Orden No Enviada
             </h2>
-            <p className="text-nori-600 leading-relaxed">
+            <p className="text-ink-600 leading-relaxed">
               Este es un sitio de demostración. Tu orden <strong>no fue procesada</strong> ni 
               enviada al restaurante. No se realizó ningún cargo.
             </p>
           </div>
 
-          <div className="bg-rice-100 rounded-xl p-4 mb-6">
-            <h3 className="font-semibold text-nori-900 mb-2 text-sm">
+          <div className="bg-paper-200 rounded-xl p-4 mb-6">
+            <h3 className="font-semibold text-ink-800 mb-2 text-sm">
               ¿Quieres ordenar de verdad?
             </h3>
-            <p className="text-sm text-nori-600 mb-4">
+            <p className="text-sm text-ink-600 mb-4">
               Para hacer un pedido real, comunícate directamente con My Sushi to Go:
             </p>
             
             <div className="space-y-2">
               <a
                 href="tel:+17872286660"
-                className="flex items-center justify-center gap-2 w-full py-3 bg-nori-900 hover:bg-nori-800 text-white font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-nori-600 focus:ring-offset-2"
+                className="flex items-center justify-center gap-2 w-full py-3 bg-ink-800 hover:bg-ink-700 text-white font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-ink-600 focus:ring-offset-2"
               >
                 <Phone className="w-4 h-4" aria-hidden="true" />
                 <span>Llamar: (787) 228-6660</span>
@@ -93,7 +96,7 @@ export default function OrderModal({ onClose }: OrderModalProps) {
                 href="https://linktr.ee/MySushiTogo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full py-3 bg-wasabi-600 hover:bg-wasabi-700 text-white font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-wasabi-500 focus:ring-offset-2"
+                className="flex items-center justify-center gap-2 w-full py-3 border-2 border-ink-300 hover:border-ink-400 text-ink-700 font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-ink-400 focus:ring-offset-2"
               >
                 <ExternalLink className="w-4 h-4" aria-hidden="true" />
                 <span>Ver Linktree Oficial</span>
@@ -103,7 +106,7 @@ export default function OrderModal({ onClose }: OrderModalProps) {
 
           <button
             onClick={onClose}
-            className="w-full py-3 border-2 border-nori-200 hover:border-nori-300 text-nori-700 font-medium rounded-xl transition-colors focus:outline-none focus:ring-2 focus:ring-nori-400 focus:ring-offset-2"
+            className="w-full py-3 border-2 border-ink-200 hover:border-ink-300 text-ink-600 font-medium rounded-xl transition-colors focus:outline-none focus:ring-2 focus:ring-ink-400 focus:ring-offset-2"
           >
             Entendido, Cerrar
           </button>
