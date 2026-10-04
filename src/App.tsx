@@ -3,7 +3,6 @@ import DemoBanner from './components/DemoBanner'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Menu from './components/Menu'
-import MenuGallery from './components/MenuGallery'
 import Offers from './components/Offers'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -19,7 +18,6 @@ function App() {
       <main className="flex-grow">
         <Hero onOrderClick={() => setShowOrderModal(true)} />
         <Menu />
-        <MenuGallery />
         <Offers />
         <Contact />
       </main>
