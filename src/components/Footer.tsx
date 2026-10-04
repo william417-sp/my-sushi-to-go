@@ -25,8 +25,11 @@ export default function Footer() {
             <span>Río Grande, PR 00745</span>
           </div>
 
-          <div className="w-full max-w-2xl border-t border-ink-700 pt-6">
-            <p className="text-xs text-ink-400 leading-relaxed">
+          <div className="w-full max-w-2xl border-t border-ink-600 pt-6">
+            <p className="text-sm text-ink-300 leading-relaxed font-medium">
+              Esta página no es el sitio oficial del restaurante.
+            </p>
+            <p className="mt-2 text-xs text-ink-400 leading-relaxed">
               Esta es una propuesta de demostración creada por una agencia de desarrollo web. 
               Este sitio no está afiliado, asociado, autorizado, respaldado ni conectado de ninguna manera 
               con My Sushi to Go Restaurant, ni con ninguno de sus subsidiarios o afiliados. 
